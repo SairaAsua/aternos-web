@@ -12,14 +12,15 @@ export default function Hero() {
       const block = document.createElement('div')
       const size = Math.random() * 50 + 25
       const delay = Math.random() * 3
-      const colors = ['bg-minecraft-grass', 'bg-minecraft-dirt', 'bg-minecraft-stone', 'bg-minecraft-diamond']
+      const colors = ['#5D9A3C', '#8B6441', '#8D8D8D', '#44D9E8']
       const randomColor = colors[Math.floor(Math.random() * colors.length)]
 
-      block.className = `absolute minecraft-block rounded-sm ${randomColor}`
+      block.className = `absolute minecraft-block rounded-sm`
       block.style.width = size + 'px'
       block.style.height = size + 'px'
       block.style.left = Math.random() * 100 + '%'
       block.style.opacity = '0.2'
+      block.style.backgroundColor = randomColor
 
       containerRef.current?.appendChild(block)
       blocksRef.current.push(block)
