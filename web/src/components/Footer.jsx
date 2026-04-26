@@ -1,52 +1,66 @@
 export default function Footer() {
   return (
-    <footer className="bg-minecraft-void border-t-4 border-minecraft-grass py-12">
+    <footer className="bg-minecraft-void border-t-4 border-minecraft-grass pt-16 pb-8">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12">
           <div>
-            <h3 className="font-pressstart text-minecraft-grass mb-4 text-sm">Servidor</h3>
-            <ul className="font-vt323 space-y-2 text-minecraft-text/70">
-              <li><a href="#" className="hover:text-minecraft-grass">Crear Servidor</a></li>
-              <li><a href="#" className="hover:text-minecraft-grass">Características</a></li>
-              <li><a href="#" className="hover:text-minecraft-grass">Precios</a></li>
+            <h3 className="font-pressstart text-minecraft-grass mb-4 text-xs tracking-wider">SERVIDOR</h3>
+            <ul className="font-vt323 space-y-3 text-minecraft-text/70">
+              <li><a href="https://aternos.org/go/" target="_blank" rel="noopener noreferrer" className="hover:text-minecraft-grass transition-colors">Crear Servidor</a></li>
+              <li><a href="https://aternos.org/software/" target="_blank" rel="noopener noreferrer" className="hover:text-minecraft-grass transition-colors">Software</a></li>
+              <li><a href="https://aternos.org/addons/" target="_blank" rel="noopener noreferrer" className="hover:text-minecraft-grass transition-colors">Mods & Plugins</a></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-pressstart text-minecraft-grass mb-4 text-sm">Comunidad</h3>
-            <ul className="font-vt323 space-y-2 text-minecraft-text/70">
-              <li><a href="#" className="hover:text-minecraft-grass">Foros</a></li>
-              <li><a href="#" className="hover:text-minecraft-grass">Discord</a></li>
-              <li><a href="#" className="hover:text-minecraft-grass">Tutoriales</a></li>
+            <h3 className="font-pressstart text-minecraft-grass mb-4 text-xs tracking-wider">COMUNIDAD</h3>
+            <ul className="font-vt323 space-y-3 text-minecraft-text/70">
+              <li><a href="https://board.aternos.org/" target="_blank" rel="noopener noreferrer" className="hover:text-minecraft-grass transition-colors">Foros</a></li>
+              <li><a href="https://discord.gg/aternos" target="_blank" rel="noopener noreferrer" className="hover:text-minecraft-grass transition-colors">Discord</a></li>
+              <li><a href="https://www.youtube.com/c/Aternos" target="_blank" rel="noopener noreferrer" className="hover:text-minecraft-grass transition-colors">YouTube</a></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-pressstart text-minecraft-grass mb-4 text-sm">Soporte</h3>
-            <ul className="font-vt323 space-y-2 text-minecraft-text/70">
-              <li><a href="#" className="hover:text-minecraft-grass">Help Center</a></li>
-              <li><a href="#" className="hover:text-minecraft-grass">Contacto</a></li>
-              <li><a href="#" className="hover:text-minecraft-grass">Estado</a></li>
+            <h3 className="font-pressstart text-minecraft-grass mb-4 text-xs tracking-wider">SOPORTE</h3>
+            <ul className="font-vt323 space-y-3 text-minecraft-text/70">
+              <li><a href="https://support.aternos.org/hc/en-us" target="_blank" rel="noopener noreferrer" className="hover:text-minecraft-grass transition-colors">Help Center</a></li>
+              <li><a href="https://status.aternos.org/" target="_blank" rel="noopener noreferrer" className="hover:text-minecraft-grass transition-colors">Estado</a></li>
+              <li><a href="mailto:support@aternos.org" className="hover:text-minecraft-grass transition-colors">Contacto</a></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-pressstart text-minecraft-grass mb-4 text-sm">Legal</h3>
-            <ul className="font-vt323 space-y-2 text-minecraft-text/70">
-              <li><a href="#" className="hover:text-minecraft-grass">Términos</a></li>
-              <li><a href="#" className="hover:text-minecraft-grass">Privacidad</a></li>
-              <li><a href="#" className="hover:text-minecraft-grass">Cookies</a></li>
+            <h3 className="font-pressstart text-minecraft-diamond mb-4 text-xs tracking-wider">ESTE REGALO</h3>
+            <ul className="font-vt323 space-y-3 text-minecraft-text/70">
+              <li><a href="https://daemoncraft.ai" target="_blank" rel="noopener noreferrer" className="hover:text-minecraft-diamond transition-colors">DaemonCraft</a></li>
+              <li><a href="https://altermundi.net" target="_blank" rel="noopener noreferrer" className="hover:text-minecraft-diamond transition-colors">AlterMundi</a></li>
+              <li>
+                <a href="mailto:nicoechaniz@daemoncraft.ai" className="hover:text-minecraft-diamond transition-colors">
+                  Contactar equipo
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-minecraft-grass/30 pt-8 text-center">
-          <p className="font-vt323 text-minecraft-text/70 text-sm">
-            © 2024 Aternos. Diseño Minecraft. Hecho con 💚
-          </p>
-          <p className="font-vt323 text-minecraft-text/50 text-xs mt-2">
-            Minecraft es propiedad de Mojang Studios / Microsoft
-          </p>
+        <div className="border-t border-minecraft-grass/20 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="text-center md:text-left">
+            <p className="font-vt323 text-minecraft-text/60 text-sm">
+              Contenido de <span className="text-minecraft-grass">Aternos</span> respetado fielmente.
+            </p>
+            <p className="font-vt323 text-minecraft-text/40 text-xs mt-1">
+              Dise\u00f1o comunitario hecho con \u2764\ufe0f por <a href="https://altermundi.net" target="_blank" rel="noopener noreferrer" className="hover:text-minecraft-diamond transition-colors">AlterMundi</a>
+            </p>
+          </div>
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 bg-minecraft-grass border-2 border-minecraft-dirt flex items-center justify-center">
+              <span className="font-pressstart text-[8px] text-minecraft-void">A</span>
+            </div>
+            <span className="font-vt323 text-minecraft-text/50 text-sm">
+              Minecraft\u2122 es marca de Mojang Studios / Microsoft
+            </span>
+          </div>
         </div>
       </div>
     </footer>
