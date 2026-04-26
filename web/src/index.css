@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1a1a2e;
+  color: #F0E6D3;
+  font-family: 'VT323', monospace;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Pixel-style text rendering */
+body, button, input, textarea {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Titles with Press Start 2P */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Minecraft-style buttons */
+.btn-minecraft {
+  @apply px-6 py-3 font-vt323 font-bold text-minecraft-void uppercase;
+  @apply bg-minecraft-grass hover:bg-minecraft-creeper;
+  @apply border-4 border-minecraft-dirt;
+  @apply transition-all duration-150;
+  @apply cursor-pointer;
+  @apply active:scale-95;
+  @apply shadow-lg hover:shadow-xl;
+  box-shadow: inset 2px 2px 0 rgba(255,255,255,0.3),
+              inset -2px -2px 0 rgba(0,0,0,0.3);
+}
+
+.btn-minecraft:hover {
+  box-shadow: inset 2px 2px 0 rgba(255,255,255,0.4),
+              inset -2px -2px 0 rgba(0,0,0,0.4),
+              0 0 15px rgba(93, 154, 60, 0.6);
+}
+
+/* Minecraft-style containers */
+.minecraft-block {
+  @apply bg-minecraft-stone border-4 border-minecraft-darkstone;
+  box-shadow: inset 1px 1px 0 rgba(255,255,255,0.1),
+              inset -1px -1px 0 rgba(0,0,0,0.5);
+}
+
+.minecraft-block-grass {
+  @apply bg-minecraft-grass border-4 border-minecraft-dirt;
+}
+
+/* Section spacing */
+section {
+  @apply py-20 px-4;
+}
+
+/* Responsive fixes for pixel fonts */
+@media (max-width: 768px) {
+  h1 { @apply text-xl md:text-3xl; letter-spacing: 1px; }
+  h2 { @apply text-lg md:text-2xl; letter-spacing: 1px; }
+  h3 { @apply text-base md:text-lg; }
+
+  section { @apply py-12 px-2; }
+  .btn-minecraft { @apply px-4 py-2 text-sm; }
+}
+
+@media (max-width: 480px) {
+  h1 { @apply text-base; letter-spacing: 0.5px; }
+  h2 { @apply text-sm; letter-spacing: 0.5px; }
+
+  body { font-size: 12px; }
+  .minecraft-block { border-width: 2px; }
+
+  section { @apply py-8 px-2; }
+}
+
+/* Smooth scroll */
+@supports (scroll-behavior: smooth) {
+  html { scroll-behavior: smooth; }
+}
+
+/* Focus states for accessibility */
+.btn-minecraft:focus {
+  outline: 3px solid #44D9E8;
+  outline-offset: 2px;
+}
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
